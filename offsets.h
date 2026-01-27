@@ -1,90 +1,120 @@
 #pragma once
 #include <cstdint>
-#include <string>
+#include <unordered_map>
+#include <fstream>
 
-// Current Patch: v39. idk - Build 2
+// Current Patch: v39.30 - Build 2
 
-namespace Offsets
-{
-    // Constant Updates
-    int Uworld = 0x178685D8; 
-    int GNames = 0x17A50D00;
-    int Actors = 0x1b0;
-    int Levels = 0x1e8;//
-    int GameState = 0x1D0;  
-    int OverlappingBuildings = 0x1D48;
-    int GameInstance = 0x248;
-    int CameraLocation = 0x180;
-    int CameraRotation = 0x190;
-    int BoundScale = 0x310;
-    int AmmoCount = 0x144C;
-    int MouseSensitivityX = 0x7a8;
-    int MouseSensitivityY = 0x7ac;
-    int ProjectileSpeed = 0x2484; //
-    int ProjectileGravity = 0x2488; // = Offsets::ProjectileSpeed + 0x4
-    int seconds = Offsets::CameraRotation + 0x10;
-    int playeraimoffset = 0x2bd0;//
-    int additionalaimoffset = 0x2ba0;
-    int bShouldDrawNativeReticle = 0xc40;
-    int ViewState = 0xd0;  // Old = 0xd0     //8  TMap<FString, FFortTournamentLeaderboardViewState>ViewStates = class.UFortCareerSocialLeaderboardVM //0xc0
-    int weaponrecoiloffset = 0x2C10;
-    //chams
-    int CustomDepthComponent = 0x5040;
+namespace offsets {
 
-    // dont know
-    int bShouldUsePerfectAimWhenTargetingMinSpread = 0x4d0; // bool bShouldUsePerfectAimWhenTargetingMinSpread: 1 class.UFortWeaponRangedItemDefinition
-    int LastRenderTime = Offsets::BoundScale + 0x1C;
-    int lastrendertime_2 = 0x198;
+    // ===== Globals =====
+    uintptr_t UWorld = 0x178685D8; // updated: 0x178C37A8 -> 0x178685D8
+    uintptr_t UWorldXorKey = 0xFFFFFFFF30B9BBF9; // updated: 0xFFFFFFFFD599D092ULL -> 0xFFFFFFFF30B9BBF9
+    uintptr_t UWorldXorRotationCount = 0; // (simple exponent : no ror8 this update)
+    uintptr_t GNames = 0x1777E080; // updated: 0x17A50D00 -> 0x1777E080
+    uintptr_t GEngine = 0x17869ED8; // updated: 0x178C50A8 -> 0x17869ED8
+    uintptr_t GObjects = 0x1785AFB0; // updated: 0x17B2DC58 -> 0x1785AFB0
+    uintptr_t GObjectsCount = 0x1785AFB8; // updated: 0x17560ED4 -> 0x1785AFB8
+    uintptr_t GObjectsXorKey = 0xFFFFFFFFCCF54342ULL;
+    uintptr_t GObjectsCountXorKey = 0x75DB1A01;
+    uintptr_t StaticFindObject = 0x73AC13; // updated: 0x71B76C -> 0x73AC13
+    uintptr_t StaticLoadObject = 0x960153;
 
-    // Less Common
-    int CurrentWeapon = 0x990;
-    int WeaponData = 0x688;
-    int WeaponList = 0x9c8;
-    int WeaponCoreAnimation = 0x19b8;
-    int TriggerType = 0x29c;
-    int Rarity = 0xAA;
-    int RankedProgress = 0xd8;
-    int KillScore = 0x11C8; 
-    int SeasonLevelUIDisplay = 0x11C4;
-    int userplus = 0x8;
-    int Username = 0xA00;
-    int TeamIndex = 0x11B1;
-    int SquadId = 0x1344;
-    int bIsDBNO = 0x841;
-    int bIsDying = 0x728;
-    int bAlreadySearched = 0xD52;
-    int ComponentVelocity = 0x188;
-    int RelativeRotation = 0x158;
-    int RelativeLocation = 0x140;
-    int PlayerArray = 0x2C8;
-    int PawnPrivate = 0x328;
-    int Component_To_World = 0x1E0;
-    int bIsReloadingWeapon = 0x3b9;
-    int CurrentReloadDuration = 0x1438;
-    int Bisabot = 0x2ba;
-    int Spectators = 0xa98;
-    int TargetedFortPawn = 0x1830;
-    int LastFiredDirection = 0x5bc8;
-    int LastFiredLocation = 0x5bb0;
-    int CurrentProjectedImpactDistance = 0x1380;
-    int LastFireTimeVerified = 0x13a0;
+    uintptr_t ProcessEvent = 0x86FAA; // updated: 0x63B7E -> 0x86FAA
+    uintptr_t ProcessEventIndex = 71;
+    uintptr_t DrawTransition = 0x513D88;
+    uintptr_t BoneMatrix = 0x55B004;
 
-    // Rare
-    int FOV_Camera = 0x740;
-    int FOVAngle = 0x2D0;  
-    int LocalPlayers = 0x38;
-    int Projection = 0x940; 
-    int AcknowledgedPawn = 0x358;
-    int PlayerCameraManager = 0x368;
-    int RotationInput = 0x530;
-    int MyHud = 0x360;
-    int RootComponent = 0x1B0;
-    int PlayerState = 0x2D0;
-    int Mesh = 0x330;
-    int HabaneroComponent = 0x948;
-    int Platform = 0x440;
-    int Bone_Array = 0x5F0;
-    int Bone_Cache = Bone_Array + 0x10;
-    int PlayerController = 0x30;
-    int PresistentLevel = 0x40;
-}
+    // ===== Player / Controller =====
+    uintptr_t LocalPlayers = 0x38;
+    uintptr_t PlayerController = 0x30;
+    uintptr_t PlayerCameraManager = 0x360; // updated: 0x368 -> 0x360
+    uintptr_t AcknowledgedPawn = 0x358;
+    uintptr_t PlayerState = 0x2D0;
+    uintptr_t NetConnection = 0x528;
+    uintptr_t TeamIndex = 0x11B1;
+    uintptr_t bIsDying = 0x728;
+    uintptr_t bIsDBNO = 0x841;
+    uintptr_t bIsABot = 0x2BA;
+
+    uintptr_t Platform = 0x440;
+    uintptr_t TargetedFortPawn = 0x1830;
+    uintptr_t KillScore = 0x11C8;
+    uintptr_t RebootCount = 0x1894;
+    uintptr_t PlayerName = 0xA08;
+    uintptr_t PlayerNamePrivate = 0x348;
+    uintptr_t RankedProgress = 0xD8;
+    uintptr_t PlayerAimOffset = 0x2BD0;
+
+    // ===== World =====
+    uintptr_t OwningGameInstance = 0x248; // updated: 0x240 -> 0x248
+    uintptr_t GameState = 0x1D0; // updated: 0x1C8 -> 0x1D0
+    uintptr_t PlayerArray = 0x2C8;
+    uintptr_t WorldSettings = 0x2B8;
+    uintptr_t WorldGravityZ = 0x330;
+    uintptr_t WorldToMeters = 0x320;
+
+    uintptr_t PersistentLevel = 0x40;
+    uintptr_t Levels = 0x1E0;
+
+    // ===== Actor / Pawn =====
+    uintptr_t AActor = 0x208;
+    uintptr_t RootComponent = 0x1B0;
+    uintptr_t PawnPrivate = 0x328;
+    uintptr_t MoveIgnoreActors = 0x348;
+    uintptr_t SuperField = 0x40;
+
+    // ===== Mesh / Components =====
+    uintptr_t Mesh = 0x330;
+    uintptr_t BoneArray = 0x5F0;
+    uintptr_t BoneCache = 0x600; // updated: 0x5F8 -> 0x600
+    uintptr_t MeshDeformerInstances = 0x5C0;
+
+    uintptr_t ComponentToWorld = 0x1E0;
+    uintptr_t RelativeLocation = 0x140;
+    uintptr_t RelativeRotation = 0x158;
+    uintptr_t RelativeScale3D = 0x170;
+    uintptr_t ComponentVelocity = 0x188;
+    uintptr_t AdditionalAimOffset = 0x2BA0;
+    uintptr_t LastRenderTime = 0x328;
+    uintptr_t LocationUnderReticle = 0x2A50;
+
+    // ===== Camera =====
+    uintptr_t CameraLocation = 0x180; // updated: 0x178 -> 0x180
+    uintptr_t CameraRotation = 0x190; // updated: 0x188 -> 0x190
+    uintptr_t CameraFOV = 0x3B4;
+
+    // ===== Vehicles =====
+    uintptr_t CurrentVehicle = 0x2C58;
+
+    // ===== Weapons =====
+    uintptr_t CurrentWeapon = 0x990;
+    uintptr_t WeaponData = 0x5A0; // updated: 0x600 -> 0x5A0
+    uintptr_t WeaponOffsetCorrection = 0x2C00;
+    uintptr_t AmmoCount = 0x14FC; // updated: 0x147C -> 0x14FC
+    uintptr_t bIsReloadingWeapon = 0x3D1;
+    uintptr_t ReloadAnimation = 0x1608;
+    uintptr_t LWProjectile_ActivateRemovedTimestamp = 0x2968;
+
+    uintptr_t ProjectileSpeed = 0x24AC; // updated: 0x29DC -> 0x24AC
+    uintptr_t ProjectileGravity = 0x24B0; // updated: 0x29E0 -> 0x24B0
+    uintptr_t MaxTargetingAimAdjustPerSecond = 0x23D0;
+    uintptr_t ServerWorldTimeSecondsDelta = 0x2E8;
+
+    uintptr_t LastFireTimeVerified = 0x142C; // added
+    uintptr_t WeaponCoreAnimation = 0x1A58; // added
+
+    // ===== Items / Loot =====
+    uintptr_t PrimaryPickupItemEntry = 0x3A8;
+    uintptr_t ItemName = 0xB0;
+    uintptr_t ItemType = 0xA8;
+    uintptr_t PrimaryAssetOverride = 0xA9;
+    uintptr_t ItemRarity = 0xAA;
+    uintptr_t bAlreadySearched = 0xD52;
+
+    // ===== Misc =====
+    uintptr_t HabaneroComponent = 0x948;
+};
+
+// Offsets from https://github.com/paysonism/Fortnite-Offsets
+// Need more offsets? Browse the full SDK at https://fnsdk.getneptune.tech today!
