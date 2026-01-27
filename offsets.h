@@ -71,8 +71,8 @@ namespace offsets {
     inline uintptr_t CustomDepthComponent = 0x5040;
 
     // ===== Camera =====
-    inline uintptr_t CameraLocation = 0x170; 
-    inline uintptr_t CameraRotation = 0x180; 
+    inline uintptr_t CameraLocation = 0x180; 
+    inline uintptr_t CameraRotation = 0x170; 
     inline uintptr_t CameraFOV = 0x740; // FOV_Camera
     inline uintptr_t ViewState = 0xD0;
 
