@@ -8,7 +8,7 @@
 namespace offsets {
 
     // ===== Globals =====
-    uintptr_t UWorld = 0x178685D8; //
+    uintptr_t UWorld = 0x999; //
     uintptr_t UWorldXorKey = 0xFFFFFFFF30B9BBF9; 
     uintptr_t UWorldXorRotationCount = 0; 
     uintptr_t GNames = 0x1777E080; 
