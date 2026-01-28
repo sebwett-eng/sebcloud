@@ -17,6 +17,8 @@ namespace offsets {
     inline uintptr_t KillScore = 0x11C8;
     inline uintptr_t seconds = 0x190 + 0x10;
     inline uintptr_t TargetedFortPawn = 0x1830;
+    inline uintptr_t WeaponData = 0;
+    inline uintptr_t ItemName = 0;
 
     // local player
     inline uintptr_t LocalPlayers = 0x38;
