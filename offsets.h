@@ -12,6 +12,11 @@ namespace offsets {
     inline uintptr_t ServerWorldTimeSecondsDelta = 0x2E8; // New: Found in GameState
     inline uintptr_t GameInstance = 0x248;
     inline uintptr_t HabaneroComponent = 0x948;
+    inline uintptr_t Username = 0xA00;
+    inline uintptr_t Platform = 0x440;
+    inline uintptr_t KillScore = 0x11C8;
+    inline uintptr_t seconds = 0x190 + 0x10;
+    inline uintptr_t TargetedFortPawn = 0x1830;
 
     // local player
     inline uintptr_t LocalPlayers = 0x38;
