@@ -11,6 +11,7 @@ namespace offsets {
     inline uintptr_t PlayerArray = 0x2C8;
     inline uintptr_t ServerWorldTimeSecondsDelta = 0x2E8; // New: Found in GameState
     inline uintptr_t GameInstance = 0x248;
+    inline uintptr_t HabaneroComponent = 0x948;
 
     // local player
     inline uintptr_t LocalPlayers = 0x38;
