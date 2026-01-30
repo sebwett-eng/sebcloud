@@ -14,6 +14,14 @@ namespace offsets {
     inline uintptr_t HabaneroComponent = 0x948;
     inline uintptr_t RootComponent = 0x1B0;
 
+    inline uintptr_t PlayerName = 0xA08;
+    inline uintptr_t Platform = 0x440;
+    inline uintptr_t CurrentWeapon = 0x990;
+    inline uintptr_t WeaponData = 0x5A0;
+    inline uintptr_t ItemName = 0xB0;
+    inline uintptr_t Tier = 0xAA;
+
+
     // local player
     inline uintptr_t LocalPlayers = 0x38;
     inline uintptr_t PlayerController = 0x30;
@@ -24,8 +32,6 @@ namespace offsets {
     inline uintptr_t PawnPrivate = 0x328;
     inline uintptr_t PlayerState = 0x2D0;
     inline uintptr_t TeamIndex = 0x11B1;
-    inline uintptr_t CurrentWeapon = 0x990;
-    inline uintptr_t CurrentWeapon = 0x360;
 
     // pawn/mesh
     inline uintptr_t Mesh = 0x330;
