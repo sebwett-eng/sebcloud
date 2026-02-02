@@ -18,7 +18,7 @@ namespace offsets {
     inline uintptr_t Platform = 0x440;
     inline uintptr_t CurrentWeapon = 0x990;
     inline uintptr_t WeaponData = 0x5A0;
-    inline uintptr_t ItemName = 0xB0;
+    inline uintptr_t ItemName = 0x40;
     inline uintptr_t Tier = 0xAA;
 
 
