@@ -2,7 +2,7 @@
 #include <cstdint>
 
 // Current Patch: v39.30 - Build 3 (Merged Update)
-
+// nigger
 namespace offsets {
     // world
     inline uintptr_t UWorld = 0x178685D8;
