@@ -10,6 +10,7 @@ namespace offsets {
     inline uintptr_t GameState = 0x1D0;
     inline uintptr_t PlayerArray = 0x2C8;
     inline uintptr_t ServerWorldTimeSecondsDelta = 0x2E8; // New: Found in GameState
+    inline uintptr_t TargetedFortPawn = 0x1830; 
     inline uintptr_t GameInstance = 0x248;
     inline uintptr_t HabaneroComponent = 0x948;
     inline uintptr_t RootComponent = 0x1B0;
