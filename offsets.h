@@ -5,16 +5,17 @@
 // nigger
 namespace offsets {
     // world
-    inline uintptr_t UWorld = 0x178685D8;
-    inline uintptr_t OwningGameInstance = 0x248;
-    inline uintptr_t GameState = 0x1D0;
-    inline uintptr_t PlayerArray = 0x2C8;
-    inline uintptr_t ServerWorldTimeSecondsDelta = 0x2E8; // New: Found in GameState
+    inline uintptr_t UWorld = 0x177E8AA8;
+    inline uintptr_t OwningGameInstance = 0x240;
+    inline uintptr_t GameState = 0x1C8;
+    inline uintptr_t PlayerArray = 0x2C8; 
+    inline uintptr_t ServerWorldTimeSecondsDelta = 0x2E8; //  ????????
     inline uintptr_t TargetedFortPawn = 0x1830; 
-    inline uintptr_t GameInstance = 0x248;
+    inline uintptr_t GameInstance = 0x1C8;
     inline uintptr_t HabaneroComponent = 0x948;
     inline uintptr_t RootComponent = 0x1B0;
 
+    // globals
     inline uintptr_t PlayerName = 0xA08;
     inline uintptr_t Platform = 0x440;
     inline uintptr_t CurrentWeapon = 0x990;
@@ -27,12 +28,12 @@ namespace offsets {
     inline uintptr_t LocalPlayers = 0x38;
     inline uintptr_t PlayerController = 0x30;
     inline uintptr_t AcknowledgedPawn = 0x358;
-    inline uintptr_t TeamId = 0x11B1;
+    inline uintptr_t TeamId = 0x11A;
 
     // player state
     inline uintptr_t PawnPrivate = 0x328;
     inline uintptr_t PlayerState = 0x2D0;
-    inline uintptr_t TeamIndex = 0x11B1;
+    inline uintptr_t TeamIndex = 0x11A9;
 
     // pawn/mesh
     inline uintptr_t Mesh = 0x330;
@@ -45,8 +46,8 @@ namespace offsets {
     inline uintptr_t LastRenderTime = 0x328;
 
     // camera
-    inline uintptr_t CameraLocation = 0x170;
-    inline uintptr_t CameraRotation = 0x180;
+    inline uintptr_t CameraLocation = 0x178;
+    inline uintptr_t CameraRotation = 0x188;
     inline uintptr_t CameraFOV = 0x3b4;
 
     // aimbot
