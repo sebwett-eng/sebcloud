@@ -1,7 +1,7 @@
 #pragma once
 #include <cstdint>
 
-// Current Patch: v39.30 - Build 3 (Merged Update)
+// Current Patch: v39.40 - Build 3 (Merged Update)
 // nigger
 namespace offsets {
     // world
