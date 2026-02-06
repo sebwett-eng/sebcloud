@@ -32,7 +32,7 @@ namespace offsets {
     // player state
     inline uintptr_t PawnPrivate = 0x328;
     inline uintptr_t PlayerState = 0x2D0;
-    inline uintptr_t TeamIndex = 0x11B1;
+    inline uintptr_t TeamIndex = 0x11A9;
 
     // pawn/mesh
     inline uintptr_t Mesh = 0x330;
