@@ -6,20 +6,20 @@
 namespace offsets {
     // world
     inline uintptr_t UWorld = 0x1780BA78;
-    inline uintptr_t OwningGameInstance = 0x240;
+    inline uintptr_t OwningGameInstance = 0x250;
     inline uintptr_t GameState = 0x1D8;
     inline uintptr_t PlayerArray = 0x2C8;
-    inline uintptr_t ServerWorldTimeSecondsDelta = 0x2E8; // New: Found in GameState
+    inline uintptr_t ServerWorldTimeSecondsDelta = 0x2E8; 
     inline uintptr_t TargetedFortPawn = 0x1830; 
-    inline uintptr_t GameInstance = 0x1C8;
+    inline uintptr_t GameInstance = 0x250;
     inline uintptr_t HabaneroComponent = 0x948;
     inline uintptr_t RootComponent = 0x1B0;
 
     inline uintptr_t PlayerName = 0xA08;
     inline uintptr_t Platform = 0x440;
     inline uintptr_t CurrentWeapon = 0x990;
-    inline uintptr_t WeaponData = 0xD8;
-    inline uintptr_t ItemName = 0x40;
+    inline uintptr_t WeaponData = 0x5F8;
+    inline uintptr_t ItemName = 0xB0;
     inline uintptr_t Tier = 0xAA;
 
 
