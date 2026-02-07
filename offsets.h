@@ -18,7 +18,7 @@ namespace offsets {
     inline uintptr_t PlayerName = 0xA08;
     inline uintptr_t Platform = 0x440;
     inline uintptr_t CurrentWeapon = 0x990;
-    inline uintptr_t WeaponData = 0x5F8;
+    inline uintptr_t WeaponData = 0x5c0;
     inline uintptr_t ItemName = 0xB0;
     inline uintptr_t Tier = 0xAA;
 
