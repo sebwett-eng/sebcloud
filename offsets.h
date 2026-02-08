@@ -15,8 +15,9 @@ namespace offsets {
     inline uintptr_t HabaneroRankedProgress = 0xD8;
     inline uintptr_t HabaneroComponent = 0x948;
     inline uintptr_t RootComponent = 0x1B0;
-    inline uintptr_t SpectatorArray = 0x2b0;
-    inline uintptr_t bIsSpectator = 0x2ba; 
+    inline uintptr_t Spectators = 0xaa0;  
+    inline uintptr_t SpectatorArray = 0x21b0;  
+
 
 
 
