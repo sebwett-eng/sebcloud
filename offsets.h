@@ -12,6 +12,7 @@ namespace offsets {
     inline uintptr_t ServerWorldTimeSecondsDelta = 0x2E8; 
     inline uintptr_t TargetedFortPawn = 0x1830; 
     inline uintptr_t GameInstance = 0x250;
+    inline uintptr_t HabaneroRankedProgress = 0xD8;
     inline uintptr_t HabaneroComponent = 0x948;
     inline uintptr_t RootComponent = 0x1B0;
 
