@@ -58,4 +58,11 @@ namespace offsets {
     // aimbot
     inline uintptr_t ControlRotation = 0x380;
     inline uintptr_t PlayerAim = 0x2BD0;
+
+    // rarity
+    inline uintptr_t Rarity = 0xAA;
+    inline uintptr_t LastFireLocation = 0x5ba0;
+    inline uintptr_t LastFireDirection = 0x5bb8;
+    inline uintptr_t ProjectedImpactDistance = 0x1378; 
+
 }
