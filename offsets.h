@@ -65,4 +65,11 @@ namespace offsets {
     inline uintptr_t LastFireDirection = 0x5bb8;
     inline uintptr_t ProjectedImpactDistance = 0x1378; 
 
+    
+    // UWorld Decryption Functiom
+    inline uint64_t DecryptUworld(uint64_t value)
+    {
+    return ~ROL8(value ^ 0x913F0DAFLL, 51);
+    }
+
 }
