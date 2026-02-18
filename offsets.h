@@ -21,6 +21,8 @@ namespace offsets {
 
 
 
+
+
     inline uintptr_t PlayerName = 0xA08;
     inline uintptr_t Platform = 0x440;
     inline uintptr_t CurrentWeapon = 0x990;
