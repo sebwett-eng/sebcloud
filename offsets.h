@@ -9,7 +9,7 @@ namespace offsets {
     inline uintptr_t OwningGameInstance = 0x240;
     inline uintptr_t GameState = 0x1c8;
     inline uintptr_t PlayerArray = 0x2c8;
-    inline uintptr_t ServerWorldTimeSecondsDelta = 0x2E8; 
+    inline uintptr_t ServerWorldTimeSecondsDelta = 0x2e8; 
     inline uintptr_t TargetedFortPawn = 0x1830; 
     inline uintptr_t GameInstance = 0x240;
     inline uintptr_t HabaneroRankedProgress = 0xD8;
@@ -53,8 +53,8 @@ namespace offsets {
     inline uintptr_t LastRenderTime = 0x328;
 
     // camera
-    inline uintptr_t CameraLocation = 0x180;
-    inline uintptr_t CameraRotation = 0x190;
+    inline uintptr_t CameraLocation = 0x170;
+    inline uintptr_t CameraRotation = 0x180;
     inline uintptr_t CameraFOV = 0x3b4;
 
     // aimbot
