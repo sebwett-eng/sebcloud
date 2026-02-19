@@ -67,6 +67,10 @@ namespace offsets {
     inline uintptr_t LastFireDirection = 0x5bb8;
     inline uintptr_t ProjectedImpactDistance = 0x1378; 
 
+    inline uintptr_t FOVMinimum = 0x2ae8;
+    inline uintptr_t FOVMaximum = 0x2aec;
+
+
     
     // UWorld Decryption Functiom
     inline uint64_t DecryptUworld(uint64_t value)
