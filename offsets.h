@@ -58,8 +58,8 @@ namespace offsets {
     inline uintptr_t CameraFOV = 0x3b4;
 
     // aimbot
-    inline uintptr_t ControlRotation = 0x380;
-    inline uintptr_t PlayerAim = 0x2BD0;
+    inline uintptr_t ControlRotation = 0x328;
+    inline uintptr_t PlayerAim = 0x2bb0;
 
     // rarity
     inline uintptr_t Rarity = 0xAA;
