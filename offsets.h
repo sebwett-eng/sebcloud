@@ -5,13 +5,13 @@
 // nigger
 namespace offsets {
     // world
-    inline uintptr_t UWorld = 0x1780BA78;
-    inline uintptr_t OwningGameInstance = 0x250;
-    inline uintptr_t GameState = 0x1D8;
-    inline uintptr_t PlayerArray = 0x2C8;
+    inline uintptr_t UWorld = 0x17A91FD8;
+    inline uintptr_t OwningGameInstance = 0x240;
+    inline uintptr_t GameState = 0x1c8;
+    inline uintptr_t PlayerArray = 0x2c8;
     inline uintptr_t ServerWorldTimeSecondsDelta = 0x2E8; 
     inline uintptr_t TargetedFortPawn = 0x1830; 
-    inline uintptr_t GameInstance = 0x250;
+    inline uintptr_t GameInstance = 0x240;
     inline uintptr_t HabaneroRankedProgress = 0xD8;
     inline uintptr_t HabaneroComponent = 0x948;
     inline uintptr_t RootComponent = 0x1B0;
@@ -71,7 +71,7 @@ namespace offsets {
     // UWorld Decryption Functiom
     inline uint64_t DecryptUworld(uint64_t value)
     {
-    return ~ROL8(value ^ 0x913F0DAFLL, 51);
+    return value ^ 0xFFFFFFFFE869D197uLL;
     }
 
 }
