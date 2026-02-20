@@ -5,11 +5,11 @@
 // nigger
 namespace offsets {
     // world
-    inline uintptr_t UWorld = 0x17A91FD8;
-    inline uintptr_t OwningGameInstance = 0x240;
-    inline uintptr_t GameState = 0x1c8;
+    inline uintptr_t UWorld = 0x178D5418;
+    inline uintptr_t OwningGameInstance = 0x250;
+    inline uintptr_t GameState = 0x1D8;
     inline uintptr_t PlayerArray = 0x2c8;
-    inline uintptr_t ServerWorldTimeSecondsDelta = 0x2e8; 
+    inline uintptr_t ServerWorldTimeSecondsDelta = 0x1A0; 
     inline uintptr_t TargetedFortPawn = 0x1830; 
     inline uintptr_t GameInstance = 0x240;
     inline uintptr_t HabaneroRankedProgress = 0xD8;
@@ -33,7 +33,7 @@ namespace offsets {
     inline uintptr_t PlayerName = 0xA08;
     inline uintptr_t Platform = 0x440;
     inline uintptr_t CurrentWeapon = 0x990;
-    inline uintptr_t WeaponData = 0x5c0;
+    inline uintptr_t WeaponData = 0x5B8;
     inline uintptr_t ItemName = 0x40;
     inline uintptr_t Tier = 0xAA;
 
@@ -60,8 +60,8 @@ namespace offsets {
     inline uintptr_t LastRenderTime = 0x328;
 
     // camera
-    inline uintptr_t CameraLocation = 0x170;
-    inline uintptr_t CameraRotation = 0x180;
+    inline uintptr_t CameraLocation = 0x180;
+    inline uintptr_t CameraRotation = 0x190;
     inline uintptr_t CameraFOV = 0x3b4;
 
     // aimbot
@@ -82,7 +82,7 @@ namespace offsets {
     // UWorld Decryption Functiom
     inline uint64_t DecryptUworld(uint64_t value)
     {
-    return value ^ 0xFFFFFFFFE869D197uLL;
+        return value ^ 0xFFFFFFFFDF234856uLL;
     }
 
 }
