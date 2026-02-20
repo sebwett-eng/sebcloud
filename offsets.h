@@ -19,6 +19,9 @@ namespace offsets {
     inline uintptr_t SpectatorArray = 0x21b0;  
     inline uintptr_t KillScore = 0x110c;
     inline uintptr_t Reboots = 0x1108;
+    inline uintptr_t CurrentVehicle = 0x2c68;
+    inline uintptr_t VehicleActive = 0x813;
+    inline uintptr_t VehicleGravity = 0x8A;
 
 
 
