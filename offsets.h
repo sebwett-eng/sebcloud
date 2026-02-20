@@ -17,6 +17,7 @@ namespace offsets {
     inline uintptr_t RootComponent = 0x1B0;
     inline uintptr_t Spectators = 0xaa0;  
     inline uintptr_t SpectatorArray = 0x21b0;  
+    inline uintptr_t KillScore = 0x110c;
 
 
 
