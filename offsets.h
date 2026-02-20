@@ -22,6 +22,7 @@ namespace offsets {
     inline uintptr_t CurrentVehicle = 0x2c68;
     inline uintptr_t VehicleActive = 0x813;
     inline uintptr_t VehicleGravity = 0x8A;
+    inline uintptr_t RelativeLocation = 0x140;
 
 
 
