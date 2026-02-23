@@ -24,6 +24,8 @@ namespace offsets {
     inline uintptr_t VehicleGravity = 0x8A;
     inline uintptr_t RelativeLocation = 0x140;
     inline uintptr_t RotationInput = 0x428;
+    inline uintptr_t AdditionalAimOffset = 0x2b80;
+
 
 
 
