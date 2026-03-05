@@ -2,14 +2,14 @@
 #include <cstdint>
 
 // Current Patch: v39.50 - Build 2 (Merged Update)
-// nigger
+
 namespace offsets {
     // world
-    inline uintptr_t UWorld = 0x178D5418;
-    inline uintptr_t OwningGameInstance = 0x250;
-    inline uintptr_t GameState = 0x1D8;
-    inline uintptr_t PlayerArray = 0x2c8;
-    inline uintptr_t ServerWorldTimeSecondsDelta = 0x1A0; 
+    inline uintptr_t UWorld = 0x17842098;
+    inline uintptr_t OwningGameInstance = 0x238;
+    inline uintptr_t GameState = 0x1c0;
+    inline uintptr_t PlayerArray = 0x2C8;
+    inline uintptr_t ServerWorldTimeSecondsDelta = 0x2E8; 
     inline uintptr_t TargetedFortPawn = 0x1830; 
     inline uintptr_t GameInstance = 0x240;
     inline uintptr_t HabaneroRankedProgress = 0xD8;
@@ -17,8 +17,8 @@ namespace offsets {
     inline uintptr_t RootComponent = 0x1B0;
     inline uintptr_t Spectators = 0xaa0;  
     inline uintptr_t SpectatorArray = 0x21b0;  
-    inline uintptr_t KillScore = 0x110c;
-    inline uintptr_t Reboots = 0x1108;
+    inline uintptr_t KillScore = 0x11C8;
+    inline uintptr_t Reboots = 0x1894;
     inline uintptr_t CurrentVehicle = 0x2c68;
     inline uintptr_t VehicleActive = 0x813;
     inline uintptr_t VehicleGravity = 0x8A;
@@ -26,19 +26,12 @@ namespace offsets {
     inline uintptr_t RotationInput = 0x428;
     inline uintptr_t AdditionalAimOffset = 0x2b80;
 
-
-
-
-
-
-
     inline uintptr_t PlayerName = 0xA08;
     inline uintptr_t Platform = 0x440;
     inline uintptr_t CurrentWeapon = 0x990;
     inline uintptr_t WeaponData = 0x5B8;
     inline uintptr_t ItemName = 0x40;
     inline uintptr_t Tier = 0xAA;
-
 
     // local player
     inline uintptr_t LocalPlayers = 0x38;
@@ -79,12 +72,9 @@ namespace offsets {
     inline uintptr_t FOVMinimum = 0x2ae8;
     inline uintptr_t FOVMaximum = 0x2aec;
 
-
-    
-    // UWorld Decryption Functiom
-    inline uint64_t DecryptUworld(uint64_t value)
+    // UWorld Decryption Function
+    inline uint64_t DecryptUworld(uint64_t v)
     {
-        return value ^ 0xFFFFFFFFDF234856uLL;
+        return ~_rotl64(v ^ 0x97363D09LL, 50);
     }
-
 }
