@@ -1,7 +1,7 @@
 #pragma once
 #include <cstdint>
 
-// Current Patch: v39.50 - Build 2 (Merged Update)
+// Current Patch: v39.51 - Build 2 (Merged Update)
 // nigger
 namespace offsets {
     // world
@@ -82,9 +82,9 @@ namespace offsets {
 
     
     // UWorld Decryption Functiom
-    inline uint64_t DecryptUworld(uint64_t value)
-    {
-        return value ^ 0xFFFFFFFFDF234856uLL;
-    }
+inline uint64_t DecryptUworld(uint64_t v)
+{
+    return ~__ROL8__(v ^ 0x97363D09LL, 50);
+}
 
 }
