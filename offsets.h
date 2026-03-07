@@ -62,8 +62,8 @@ namespace offsets {
     inline uintptr_t LastRenderTime = 0x328;
 
     // camera
-    inline uintptr_t CameraLocation = 0x180;
-    inline uintptr_t CameraRotation = 0x190;
+    inline uintptr_t CameraLocation = 0x170;
+    inline uintptr_t CameraRotation = 0x180;
     inline uintptr_t CameraFOV = 0x3b4;
 
     // aimbot
