@@ -1,8 +1,8 @@
 #pragma once
 #include <cstdint>
-#include <intrin.h> // Required for _rotl64
+#include <algorithm>
 
-// Current Patch: v40.00 - (Updated with provided offsets)
+// Current Patch: v40.00 
 namespace offsets {
     // world
     inline uintptr_t UWorld = 0x19401C60; // Updated
@@ -73,9 +73,9 @@ namespace offsets {
     inline uintptr_t FOVMaximum = 0x2aec;
 
     // UWorld Decryption Function
-    inline uint64_t DecryptUworld(uint64_t v)
+    inline uint64_t DecryptUworld(uint64_t world)
     {
-        // Updated with UWorldXorKey: 0x35E5647853A0CBFULL and RotationCount: 32
-        return ~_rotl64(v ^ 0x35E5647853A0CBFULL, 32);
+        if (!world) return 0;
+        return ((world << 32) | (world >> (64 - 32))) ^ 0x35E5647853A0CBFULL;
     }
 }
