@@ -2,6 +2,9 @@
 #include <cstdint>
 #include <algorithm>
 
+
+// Current Patch: v40.10
+
 namespace offsets {
     // world
     inline uintptr_t UWorld = 0x1895DE60; // Updated
